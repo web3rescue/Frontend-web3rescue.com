@@ -1,0 +1,15 @@
+@import "../../utils/commons.scss";
+
+.container {
+  min-width: 200px;
+  min-height: 100px;
+  padding: 2rem;
+  border-radius: 10px;
+  @extend .bgGlass;
+}
+.disablePadding {
+  padding: 0;
+}
+.noMinHeight {
+  min-height: auto;
+}

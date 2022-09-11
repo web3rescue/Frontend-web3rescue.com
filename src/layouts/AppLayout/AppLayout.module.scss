@@ -1,0 +1,229 @@
+@import "../../utils/commons.scss";
+
+$switchHeight: 4.2rem;
+$cardHeight: 400px;
+$stepperWidth: 240px;
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: var(--nav-height);
+  margin-bottom: 2rem;
+
+  .stepper {
+    margin-top: 2rem;
+    .card {
+      // min-width: 230px;
+      width: $stepperWidth;
+
+      padding: 1.2rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 42px;
+        // transform: translate(-50px, -42px);
+        height: calc(calc($cardHeight / 2) - 100px);
+        // background: white;
+        // width: 1px;
+        // border: 2px dashed rgba($color: #fff, $alpha: 0.3);
+        z-index: -1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 70px;
+        left: 42px;
+        // transform: translate(-50px, -42px);
+        height: calc(calc($cardHeight / 2) - 100px);
+        // background: white;
+        // width: 1px;
+        // border: 2px dashed rgba($color: #fff, $alpha: 0.3);
+        z-index: -1;
+      }
+      > div {
+        span {
+          color: var(--clr-success);
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .connector {
+      &::before,
+      &::after {
+        border: 2px dashed rgba($color: #fff, $alpha: 0.3);
+      }
+    }
+    .connector2 {
+      &::before,
+      &::after {
+        border: 2px dashed #fff;
+      }
+    }
+    .connector1 {
+      &::before {
+        border: 2px dashed #fff;
+      }
+      &::after {
+        border: 2px dashed rgba($color: #fff, $alpha: 0.3);
+      }
+    }
+    > div {
+      @extend .flexCol;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: $cardHeight;
+    }
+    > div > div {
+      @extend .flexRow;
+      justify-content: flex-start;
+      // align-items: flex-start;
+      z-index: 10;
+      div:nth-child(1) {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @extend .flexRow;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+      }
+      div:nth-child(2) {
+        margin-left: 1rem;
+        p {
+          font-size: 0.9rem;
+        }
+        h6 {
+          font-size: 0.95rem;
+          margin-top: 0.2rem;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    width: calc(100% - $stepperWidth - 2rem);
+    .header {
+      height: $switchHeight;
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+    .box {
+      position: relative;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 1px dashed #ffffff;
+      border-radius: 5px;
+      min-height: 200px;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    .left {
+      width: 100%;
+    }
+    .stepper {
+      width: 100%;
+      .card {
+        width: 100%;
+      }
+    }
+    .right {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+}
+.switchType {
+  @extend .flexRow;
+  padding: 0.5rem;
+  border-radius: 10px;
+  height: $switchHeight;
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-1),
+    var(--clr-primary-3)
+  );
+  color: white;
+  > div {
+    flex: 1;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+.selected {
+  background: white;
+  color: #202020;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.notVisited {
+  div:nth-child(1) {
+    @extend .bgGlass;
+  }
+}
+.completed {
+  div:nth-child(1) {
+    background: white;
+    color: black !important;
+  }
+}
+.active {
+  div:nth-child(1) {
+    $border: 2px;
+    position: relative;
+    color: #fff;
+    background: var(--clr-bg-dark-1);
+    background-clip: padding-box; /* !important */
+    -webkit-background-clip: padding-box; /* !important */
+    border: solid $border transparent; /* !important */
+    // border-radius: 1em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(
+        to right,
+        var(--clr-primary-4),
+        var(--clr-primary-1) 70%
+      );
+    }
+  }
+}
+.loading {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 5px;
+  > span {
+    height: 100%;
+    @extend .bgGlass;
+    > span {
+      background: linear-gradient(
+        to right,
+        var(--clr-primary-1),
+        var(--clr-primary-3)
+      );
+    }
+  }
+}

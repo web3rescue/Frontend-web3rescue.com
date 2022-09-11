@@ -1,0 +1,65 @@
+@import "../../utils/commons.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  @extend .flexRow;
+  justify-content: center;
+  .main {
+    header {
+      @extend .flexRow;
+      h6 {
+        color: #160037;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+    hr {
+      margin-top: 0.2rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    min-width: 100px;
+    min-height: 100px;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    background: white;
+    border: 5px solid var(--clr-primary-1);
+    padding: 2rem;
+  }
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modalClose {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading {
+  margin-top: 2rem;
+  width: 100%;
+  @extend .flexRow;
+  justify-content: center;
+  svg {
+    color: var(--clr-primary-1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    display: none;
+    opacity: 0;
+    bottom: -10px;
+  }
+
+  to {
+    display: flex;
+    opacity: 1;
+    bottom: 0;
+  }
+}

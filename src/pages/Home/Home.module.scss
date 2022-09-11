@@ -1,0 +1,277 @@
+@import "../../utils/commons.scss";
+
+.container {
+  // background: var(--clr-bg-dark-1);
+  // margin-top: var(--nav-height);
+  // @extend .flexCol;
+  min-height: 100vh;
+
+  section {
+    width: var(--fixed-width);
+    margin: 0 auto;
+  }
+
+  .hero {
+    min-height: 100vh;
+    @extend .flexRow;
+    gap: 1rem;
+
+    .text {
+      flex: 1;
+      h1 {
+        font-weight: 600;
+      }
+      h2 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 3rem;
+        color: var(--clr-text-para);
+        margin-top: 1rem;
+      }
+      .navigate {
+        @extend .flexRow;
+        justify-content: flex-start;
+        // align-items: flex-start;
+        margin-top: 5rem;
+        height: 150px;
+        img {
+          height: 100%;
+        }
+        > div {
+          @extend .flexCol;
+          align-items: flex-start;
+          height: 100%;
+          margin-left: 3rem;
+          .btns {
+            justify-self: flex-end;
+            margin-top: auto;
+            button {
+              margin: 0 !important;
+            }
+          }
+          p {
+            font-size: 1.1rem;
+            font-weight: 500;
+          }
+          div {
+            @extend .flexRow;
+            justify-content: flex-start;
+          }
+          > div > div {
+            margin-left: 2rem;
+            cursor: pointer;
+            img {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .images {
+      flex: 1;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .howContainer {
+    width: 100%;
+    background: var(--clr-bg-light);
+  }
+  .how {
+    width: var(--fixed-width);
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    p {
+      margin-top: 2rem;
+      color: white;
+      font-size: 20px;
+    }
+    .steps {
+      @extend .flexRow;
+      margin-top: 8rem;
+      gap: 10rem;
+      .card {
+        position: relative;
+        flex: 1;
+        &:nth-of-type(1) {
+          h5 {
+            color: white;
+          }
+          span {
+            color: var(--clr-primary-1);
+          }
+        }
+        &:nth-of-type(2) {
+          h5 {
+            color: white;
+          }
+          span {
+            color: var(--clr-primary-2);
+          }
+        }
+        &:nth-of-type(3) {
+          h5 {
+            color: white;
+          }
+          span {
+            color: var(--clr-primary-3);
+          }
+        }
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          color: white;
+          font-size: 18rem;
+          font-weight: 700;
+          line-height: 10rem;
+        }
+        > div {
+          flex: 1;
+          height: 350px;
+          margin-left: 2rem;
+          h5 {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  .faq {
+    padding: 100px 0;
+    > div > div {
+      padding: 5rem 6rem;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      span:nth-of-type(1) {
+        color: var(--clr-primary-1);
+      }
+      span:nth-of-type(2) {
+        color: var(--clr-primary-2);
+      }
+      span:nth-of-type(3) {
+        color: var(--clr-primary-3);
+      }
+      span:nth-of-type(4) {
+        color: var(--clr-primary-3);
+      }
+    }
+    > div {
+      margin-top: 3rem;
+      position: relative;
+    }
+    .circle {
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(
+        153.44% 1299.31% at -40.89% -32.5%,
+        #f7c120 22.8%,
+        #fb5afe 93.93%
+      );
+    }
+    .circle:nth-of-type(2) {
+      top: auto;
+      bottom: 30px;
+      left: auto;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(
+        142.96% 1430.25% at 119.42% -19.57%,
+        #7b4cff 0%,
+        #e958e0 74.04%,
+        #fe5ada 97.22%
+      );
+    }
+
+    @media screen and (max-width: 768px) {
+      > div > div {
+        padding: 3rem 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    .how {
+      .steps {
+        gap: 4rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .how {
+      .steps {
+        .card > div {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    display: block;
+    margin-top: var(--nav-height);
+    .hero {
+      flex-direction: column;
+
+      .images {
+        margin-top: 2rem;
+      }
+    }
+    .how {
+      .steps {
+        flex-direction: column;
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .hero {
+      .text .navigate > div {
+        margin-left: 0.5rem;
+
+        .btns > div {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    .how {
+      .steps {
+        .card {
+          > div {
+            margin-left: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .card span {
+    font-size: 12rem !important;
+    line-height: 0 !important;
+    top: 1rem !important;
+  }
+}

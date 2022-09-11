@@ -1,0 +1,258 @@
+@import "../../utils/commons.scss";
+
+/*
+.container {
+}
+*/
+
+.input {
+  width: 100%;
+  margin: 2rem 0;
+  input {
+    width: 100%;
+  }
+}
+.select {
+  @extend .flexRow;
+  justify-content: center;
+  min-width: 70px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #fefbff;
+  padding: 0.5rem 0.8rem 0.5rem 0.5rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+  cursor: pointer;
+  img {
+    max-height: 30px;
+    margin: 0 0.1rem;
+  }
+  h5 {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0.5rem;
+  }
+  span {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0.5rem;
+    font-family: "Roboto Mono", monospace;
+  }
+}
+button {
+  margin: 1rem auto;
+}
+.note {
+  font-size: 0.9rem;
+  color: var(--clr-text-para);
+  margin-top: 1rem;
+}
+.signedTransaction {
+  margin-top: 2rem;
+  border: 1px solid var(--clr-success);
+  p,
+  * {
+    max-width: 100%;
+    word-wrap: break-word;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+  }
+  span {
+    color: var(--clr-success);
+  }
+}
+.collapse {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--clr-bg-dark-1), transparent);
+  }
+  p {
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.header {
+  @extend .flexCol;
+  align-items: flex-start;
+  .gas {
+    @extend .flexRow;
+    @extend .bgGlass;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    p {
+      margin-left: 0.3rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      color: white;
+    }
+  }
+}
+form {
+  margin-top: 2rem;
+}
+.paymentAddress {
+  margin-top: 2rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  position: relative;
+  > span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 80%;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+  }
+}
+.note {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--clr-text-para);
+}
+.modal {
+  > div {
+    min-width: 400px !important;
+    max-height: 600px;
+    overflow: hidden;
+  }
+  .search {
+    .input {
+      > div > span {
+        padding-left: 1rem;
+      }
+      input {
+        color: #8c8c8c;
+        min-height: 2rem;
+        font-size: 0.9rem;
+      }
+    }
+    > div {
+      background: transparent;
+      > div {
+        border: 1px solid grey;
+        margin: 0;
+      }
+    }
+  }
+}
+.list {
+  padding: 0 1rem;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: rgba(black, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  h5,
+  p {
+    color: black;
+  }
+  p {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  input {
+    font-size: 1rem !important;
+  }
+  padding-bottom: 2rem;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .listItem {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    cursor: pointer;
+
+    > div > p {
+      font-family: "Roboto Mono", monospace;
+      max-width: 70px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tokenDescription {
+      margin-left: 0.5rem;
+      h5,
+      p {
+        max-width: 200px;
+        word-wrap: break-word;
+      }
+    }
+    .copyId {
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: var(--clr-primary-1);
+      }
+    }
+    @extend .flexRow;
+    > div {
+      width: 100%;
+      @extend .flexRow;
+      justify-content: flex-start;
+      img {
+        width: 40px;
+      }
+      > div {
+        margin-left: 0.5rem;
+      }
+      p {
+        margin-left: auto;
+      }
+    }
+  }
+}
+.rawTransaction {
+  p:nth-of-type(1) {
+    font-weight: 600;
+    // color: var(--clr-success);
+  }
+  p {
+    word-wrap: break-word;
+    max-width: 100%;
+    margin: 0.5rem 0;
+    * {
+      font-family: "Roboto Mono", monospace;
+    }
+    span:nth-of-type(1) {
+      color: var(--clr-primary-1);
+    }
+    span:nth-of-type(2) {
+      // display: inline-block;
+      word-wrap: break-word;
+    }
+  }
+}

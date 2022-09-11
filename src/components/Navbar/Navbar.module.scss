@@ -1,0 +1,53 @@
+@import "../../utils/commons.scss";
+
+.container {
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-bg-dark-1);
+  z-index: 10;
+  .logo * {
+    font-family: "Roboto Mono", monospace;
+  }
+  nav {
+    width: var(--fixed-width);
+    margin: 0 auto;
+    height: 100%;
+    @extend .flexRow;
+    color: white;
+    ul {
+      @extend .flexRow;
+      list-style: none;
+      li {
+        margin: 0 1rem;
+        a {
+          text-decoration: none;
+          color: var(--clr-text-para);
+        }
+      }
+      .active {
+        color: white;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: var(--clr-primary-1);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 786px) {
+    ul {
+      li:nth-child(1),
+      li:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

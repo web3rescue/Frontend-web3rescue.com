@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --clr-primary-1: #fe5ada;
+  --clr-primary-2: #c153eb;
+  --clr-primary-3: #7b4cff;
+  --clr-primary-4: #f7c120;
+  --clr-bg-dark-1: #160037;
+  --clr-bg-light: #1e004c;
+  --clr-success: #98e594;
+
+  --fixed-width: 80%;
+  --clr-text-para: #ffffffcc;
+
+  --nav-height: 90px;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--clr-bg-dark-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+p,
+ul {
+  color: var(--clr-text-para);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2.6rem;
+  line-height: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+p {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  :root {
+    --fixed-width: 90%;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  :root {
+    --fixed-width: 90%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+}

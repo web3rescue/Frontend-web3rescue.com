@@ -1,0 +1,19 @@
+#json-pretty {
+  /* max-width: 100%; */
+  width: 100%;
+  overflow-x: auto;
+}
+
+/*
+.__json-string__ {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+*/
+
+.__json-key__ {
+  color: #fe5ada !important;
+}
