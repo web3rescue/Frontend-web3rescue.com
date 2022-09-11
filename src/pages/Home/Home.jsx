@@ -102,9 +102,9 @@ const Home = () => {
         "Rescue happens within 30-60 seconds after clicking Rescue on the final step based on network conditions, we pay higher gas so expect the fastest as possible",
     },
     {
-      title: "Whats the charge for per rescue?",
+      title: "Whats the charge per rescue?",
       content:
-        "Its 0.1 ETH per rescue no matter if you want to rescue an ENS domain, an NFT or any ERC20 tokens.",
+        "Its 0.1 ETH per rescue no matter if you want to rescue an ENS domain, an NFT or any ERC20 token",
     },
   ];
 
