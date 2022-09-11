@@ -94,7 +94,7 @@ const Home = () => {
     {
       title: "Why do i need to enter PrivateKey?",
       content:
-        "Sadly for anyone to withdraw those assets in your wallet and transfer to someone even for rescue would need a signed transaction and that needs a Key The code is opensourced which ensures your keys are never sent to backend they just used to sign a then removed from states and frontend both!",
+        "Sadly for anyone to withdraw those assets in your wallet and transfer to someone even for rescue would need a signed transaction and that needs a Key The code is opensourced here https://github.com/web3rescue/Frontend-web3rescue.com which ensures your keys are never sent to backend they just used to sign a then removed from states and frontend both!",
     },
     {
       title: "How much time does it take to rescue?",
@@ -104,7 +104,7 @@ const Home = () => {
     {
       title: "Whats the charge for per rescue?",
       content:
-        "Its 0.5 ETH per rescue no matter if you want to rescue an ENS domain, an NFT or any ERC20 tokens.",
+        "Its 0.1 ETH per rescue no matter if you want to rescue an ENS domain, an NFT or any ERC20 tokens.",
     },
   ];
 
