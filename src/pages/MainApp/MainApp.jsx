@@ -232,7 +232,7 @@ const Step1 = ({ setLoading, showAlert }) => {
           ) : selected !== ethIcon ? (
             <img src={selected} alt="selected" />
           ) : (
-            <h5>NFT</h5>
+            <h5>Select NFT</h5>
           )}
           {contractAddress && (
             <span>
