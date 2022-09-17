@@ -228,7 +228,7 @@ const Step1 = ({ setLoading, showAlert }) => {
           }}
         >
           {tokenType === "ERC20" ? (
-            <img src={selected} alt="selected" />
+            <h5>Select Token</h5>
           ) : selected !== ethIcon ? (
             <img src={selected} alt="selected" />
           ) : (
