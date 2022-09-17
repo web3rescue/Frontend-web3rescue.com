@@ -84,27 +84,27 @@ const Home = () => {
     {
       title: "How web3rescue.com helps against Sweeper Bot?",
       content:
-        "We make use of MEV private transactions which makes sure two transactions required occur in same block and Sweeper Bot never knows of this unless it is completed",
+        "We beat the sweeper bots via private transactions, they won't ever know how we save your assets.",
     },
     {
       title: "What all Assets can be rescued?",
       content:
-        "Assets that havent left your wallet can be secured on web3rescue only ERC20 Tokens and NFT's can be rescued on Ethereum chain only. For Staked Assets and Assets on another chain reach out to chat support",
+        "Any ERC20 tokens that haven't left your wallet can be rescued, for any staked assets, reach out via chat for support.",
     },
     {
-      title: "Why do i need to enter PrivateKey?",
+      title: "Why do I need to enter PrivateKey?",
       content:
-        "Sadly for anyone to withdraw those assets in your wallet and transfer to someone even for rescue would need a signed transaction and that needs a Key The code is opensourced here https://github.com/web3rescue/Frontend-web3rescue.com which ensures your keys are never sent to backend they just used to sign a then removed from states and frontend both!",
+        "We need the private keys to save your assets, but for your safety, we never even save it in our database. Check our open sourced code to see how it's all done.",
     },
     {
       title: "How much time does it take to rescue?",
       content:
-        "Rescue happens within 30-60 seconds after clicking Rescue on the final step based on network conditions, we pay higher gas so expect the fastest as possible",
+        "We rescue your assets as fast as possible, max about 30-60 seconds.",
     },
     {
       title: "Whats the charge per rescue?",
       content:
-        "Its 0.1 ETH per rescue no matter if you want to rescue an ENS domain, an NFT or any ERC20 token",
+        "We charge 0.1 ETH for any rescue amount, a small price to pay to save your assets.",
     },
   ];
 
@@ -120,9 +120,9 @@ const Home = () => {
       <div className={styles.container}>
         <section className={styles.hero}>
           <div className={styles.text}>
-            <h1>
+            {/* <h1>
               <Logo />
-            </h1>
+            </h1> */}
             <h2>
               Rescue your Ethereum Tokens and NFT's from Compromised accounts{" "}
             </h2>
