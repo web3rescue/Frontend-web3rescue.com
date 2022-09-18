@@ -1,9 +1,10 @@
 import styles from "./Logo.module.scss";
+import logoIcon from "../../assets/logo.png";
 
 const Logo = ({ fontSize }) => {
   return (
     <span className={styles.container} style={{ fontSize }}>
-      Web3Rescue
+      <img src={logoIcon} alt="Web3Rescue" height="auto" width="100px"></img>
     </span>
   );
 };
