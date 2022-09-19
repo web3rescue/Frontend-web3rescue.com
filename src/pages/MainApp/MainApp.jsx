@@ -130,7 +130,7 @@ const Step1 = ({ setLoading, showAlert }) => {
 
   useEffect(() => {
     setContractAddress("");
-    setSelected(ethIcon);
+    setSelected(null);
   }, [setContractAddress, tokenType]);
 
   async function handleSubmit(e) {
@@ -227,9 +227,9 @@ const Step1 = ({ setLoading, showAlert }) => {
             fetchTokens();
           }}
         >
-          {tokenType === "ERC20" ? (
+          {tokenType === "ERC20" && selected === null ? (
             <h5>Select Token</h5>
-          ) : selected !== ethIcon ? (
+          ) : selected !== null ? (
             <img src={selected} alt="selected" />
           ) : (
             <h5>Select NFT</h5>
