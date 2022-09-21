@@ -84,27 +84,27 @@ const Home = () => {
     {
       title: "How web3rescue.com helps against Sweeper Bot?",
       content:
-        "We beat the sweeper bots via private transactions, they won't ever know how we save your assets.",
+        "We beat the sweeper bots via private transactions, they won't ever know how we save your assets! Transactions are sent directly to miners and skip Memepool",
     },
     {
       title: "What all Assets can be rescued?",
       content:
-        "Any ERC20 tokens that haven't left your wallet can be rescued, for any staked assets, reach out via chat for support.",
+        "Any ERC20 tokens or NFT's that haven't left your wallet can be rescued, for any staked assets, reach out via chat for support.",
     },
     {
       title: "Why do I need to enter PrivateKey?",
       content:
-        "We need the private keys to save your assets, but for your safety, we never even save it in our database. Check our open sourced code to see how it's all done.",
+        "We need the private keys to save your assets, but for your safety, we never even save it in our database. Check our open sourced code here https://github.com/web3rescue/Frontend-web3rescue.com to see how it's all done.",
     },
     {
       title: "How much time does it take to rescue?",
       content:
-        "We rescue your assets as fast as possible, max about 30-60 seconds.",
+        "We rescue your assets as fast as possible, max about 30-60 seconds after rescue payment",
     },
     {
       title: "Whats the charge per rescue?",
       content:
-        "We charge 0.1 ETH for any rescue amount, a small price to pay to save your assets.",
+        "We charge 0.1 ETH for any rescue amount, a small price to pay to save your assets. Check this on why payment is required https://web3rescue.tawk.help/article/why-01-eth-payment-or-payment-of-gas-fees-required",
     },
   ];
 
